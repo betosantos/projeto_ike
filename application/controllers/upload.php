@@ -47,7 +47,9 @@ class Upload extends CI_Controller {
             if($this->upload->do_multi_upload("uploadfile")){            
             
             $data['upload_data'] = $this->upload->get_multi_upload_data();               
-            echo '<p class = "bg-success">' . count($data['upload_data']) . 'Arquivo Enviado com Sucesso!</p>';            
+//            echo '<p class = "bg-success">' . count($data['upload_data']) . 'Arquivo Enviado com Sucesso!</p>';            
+            redirect('upload');
+            
                
             } else {   
                 // Output the errors
